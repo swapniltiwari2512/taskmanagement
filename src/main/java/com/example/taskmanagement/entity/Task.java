@@ -9,9 +9,13 @@ public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
+    @Column(name = "TITLE")
     private String title;
+    @Column(name = "DESCRIPTION")
     private String description;
+    @Column(name = "STATUS")
     private String status;
 
     public Task()

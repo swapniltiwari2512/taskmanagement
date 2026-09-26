@@ -4,6 +4,8 @@ import com.example.taskmanagement.entity.Task;
 import org.springframework.stereotype.Service;
 import com.example.taskmanagement.repository.TaskRepository;
 
+import java.util.List;
+
 @Service
 public class TaskService {
 
@@ -17,4 +19,17 @@ public class TaskService {
         return taskRepository.save(task);
     }
 
+    public List<Task> getAllTask() {
+        return taskRepository.findAll();
+    }
+
+    public Task getTaskbyId(Long id) {
+        return taskRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Task not found with id: " + id));
+    }
+
+    public void deleteTaskById(Long id) {
+         taskRepository.deleteById(id);
+
+    }
 }
