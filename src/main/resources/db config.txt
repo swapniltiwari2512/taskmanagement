@@ -1,0 +1,6 @@
+for user SYS,SYSTEM and PDBADMIN
+password : 2512
+
+Multienant Container Database : Local:1521
+pluggable database : local:1521/XEPDB1
+EM Express URL : https://localhost:5500/em
